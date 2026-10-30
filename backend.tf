@@ -2,10 +2,10 @@ terraform {
   required_version = ">= 1.10"
 
   backend "s3" {
-    bucket       = "depi-team-n-tfstate"
+    bucket       = "hybrid-connectivity-tfstate"
     key          = "project/terraform.tfstate"
     region       = "us-east-1"
-    profile      = "depi-team-n"
+    profile      = "hybrid-connectivity"
     encrypt      = true
     use_lockfile = true
   }
