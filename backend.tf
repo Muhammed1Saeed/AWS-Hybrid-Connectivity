@@ -20,11 +20,11 @@ terraform {
 
 provider "aws" {
   region  = "us-east-1"
-  profile = "depi-team-n"
+  profile = "hybrid-connectivity"
 
   default_tags {
     tags = {
-      Project   = "depi-team-n"
+      Project   = "AWS-Hybrid-Connectivity"
       ManagedBy = "terraform"
     }
   }
