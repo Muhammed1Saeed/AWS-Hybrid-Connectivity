@@ -11,6 +11,7 @@ resource "aws_vpc" "hub" {
 resource "aws_subnet" "hub-pub-a" {
   vpc_id     = aws_vpc.hub.id
   cidr_block = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "hub-pub-a"
@@ -19,6 +20,7 @@ resource "aws_subnet" "hub-pub-a" {
 resource "aws_subnet" "hub-pvt-ALB-a" {
   vpc_id     = aws_vpc.hub.id
   cidr_block = "10.0.2.0/24"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "hub-pvt-ALB-a"
@@ -27,6 +29,7 @@ resource "aws_subnet" "hub-pvt-ALB-a" {
 resource "aws_subnet" "hub-pvt-ALB-b" {
   vpc_id     = aws_vpc.hub.id
   cidr_block = "10.0.3.0/24"
+  availability_zone       = "us-east-1b"
 
   tags = {
     Name = "hub-pvt-ALB-b"
@@ -35,6 +38,7 @@ resource "aws_subnet" "hub-pvt-ALB-b" {
 resource "aws_subnet" "hub-pvt-TGW-a" {
   vpc_id     = aws_vpc.hub.id
   cidr_block = "10.0.4.0/24"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "hub-pvt-TGW-a"
@@ -43,6 +47,7 @@ resource "aws_subnet" "hub-pvt-TGW-a" {
 resource "aws_subnet" "hub-pvt-TGW-b" {
   vpc_id     = aws_vpc.hub.id
   cidr_block = "10.0.5.0/24"
+  availability_zone       = "us-east-1b"
 
   tags = {
     Name = "hub-pvt-TGW-b"
